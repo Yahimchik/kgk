@@ -1,0 +1,162 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #007bff, #00aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Стили для контейнера формы */
+.form-container {
+    background: #fff;
+    padding: 25px;
+    margin-top: 30px;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-container input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+}
+
+.form-container input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.form-container button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+
+.form-container button i {
+    margin-right: 8px;
+}
+
+.form-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Блок с информацией о плательщике */
+.payer-info {
+    background: #fff;
+    padding: 25px;
+    margin-top: 20px;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payer-info h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.payer-info .info-grid {
+    display: grid;
+    grid-template-columns: minmax(150px, 250px) auto;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.payer-info .label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.payer-info .value {
+    font-size: 16px;
+    color: #333;
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+}
+
+.payer-info .status-null {
+    color: red;
+}
+
+.error-message {
+    background-color: #f44336; /* Красный фон */
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    display: none; /* Скрыто по умолчанию */
+}
+
+@media (max-width: 600px) {
+    .payer-info, .form-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .payer-info .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

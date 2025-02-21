@@ -1,0 +1,6 @@
+server:
+  port: 9090
+
+external:
+  payer-service:
+    url: "http://grp.nalog.gov.by/api/grp-public/data"

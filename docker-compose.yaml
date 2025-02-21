@@ -1,0 +1,8 @@
+services:
+  kgk-service:
+    build:
+      context: .  # Путь до директории, где находится Dockerfile
+      dockerfile: Dockerfile  # Если Dockerfile называется иначе, можно указать его имя
+    ports:
+      - "9090:9090"
+    restart: always
